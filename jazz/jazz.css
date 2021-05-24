@@ -1,0 +1,191 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #777;
+    font-family: 'Lato', sans-serif;
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+.bg {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    opacity: 0.75;
+    z-index: 0;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .bg {
+        background-attachment: scroll;
+    }
+}
+
+.bg1 {
+    background-image: url('img/j_BgImg1.jpg');
+    min-height: 100%;
+}
+
+.bg2 {
+    background-image: url('img/j_BgImg2.jpg');
+    min-height: 80%;
+}
+
+.bg3 {
+    background-image: url('img/j_BgImg3.jpg');
+    min-height: 80%;
+}
+
+.content {
+    background-color: #ddd;
+    color: #282E34;
+    padding: 40px 20%;
+    text-align: justify;
+    line-height: 150%;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.border {
+    background-color: #FFFFFF;
+    font-size: 32px;
+    letter-spacing: 10px;
+    padding: 18px;
+    color: #111;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 26px;
+    color: black;
+}
+
+.arrowdown {
+    text-align: center;
+    font-size: 32pt;
+    opacity: 0.75;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+}
+
+.arrowup {
+    text-align: center;
+    font-size: 32pt;
+    opacity: 0.75;
+    position: absolute;
+    bottom: 75%;
+    left: 0;
+    width: 100%;
+}
+
+.player {
+    position: relative;
+    text-align: center;/*
+    opacity: 0.4;
+    transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+    bottom: 10px;
+    right: 10px;
+    animation-name: blink;
+    animation-duration: 3s;
+    -moz-animation-name: blink;
+    -moz-animation-duration: 3s;
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 3s;
+    */
+}
+/*
+.player:hover {
+    opacity: 1;
+}*/
+
+.menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.menu span {
+    display:  block;
+}
+
+.menuborder {
+    position: relative;
+    background-color: #fff;
+    font-size: 22px;
+    letter-spacing: 5px;
+    padding: 10px;
+    color: #111;
+    opacity: 0.8;
+    transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+}
+.menuborder:hover {
+    opacity: 1;
+}
+
+#hide-cont{
+    margin-top: 80px;
+}
+
+#hide {
+    display: none;
+}
+
+.burgerwrap {
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.hamburger {
+    opacity: 0.8;
+}
+
+.hamburger:hover {
+    opacity: 1;
+}
+
+@keyframes blink {
+    25% {opacity: 1;}
+    50% {opacity: 0.4;}
+    75% {opacity: 1;}
+}
+@-webkit-keyframes blink {
+    25% {opacity: 1;}
+    50% {opacity: 0.4;}
+    75% {opacity: 1;}
+}
+@-moz-keyframes blink {
+    25% {opacity: 1;}
+    50% {opacity: 0.4;}
+    75% {opacity: 1;}
+}
