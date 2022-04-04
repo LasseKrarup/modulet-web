@@ -1,30 +1,268 @@
 <!DOCTYPE html>
-
-<html lang=en>
+<html lang="en">
     
     <head>
         <meta charset="utf-8">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+</script>
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome -->
-        <link rel="stylesheet" href="frontpage.css">
+        <link rel="stylesheet" href="hamburgers.css">
+        <link rel="stylesheet" href="party.css">
+        <link rel="stylesheet" href="quotes/quotes.css">
+        <title>Modulet</title>
         
-        <meta property="og:title" content="Modulet" />
-        <meta property="og:description" content="PartyBand og JazzBand i én og samme besætning" />
+                <meta property="og:title" content="Modulet" />
+        <meta property="og:description" content="PartyBand i særklasse - underholdningsmusik til middagen og til dansegulvet" />
 <meta property="og:type" content="artist" />
-<meta property="og:image" content="http://www.modulet.dk/party/img/BgImg1.jpg" />
+<meta property="og:image" content="http://www.modulet.dk/img/BgImg1.JPG" />
+        
     </head>
     
-    <body>
-        <a href="/party/">
-            <div class="bg bgtop">
-                <div class="caption">
-                    <span class="border-party">Party</span>
+    <body id="top">
+        
+            <div class="menu" id="click">
+                <div class="burgerwrap">
+                <button id="burger" class="hamburger hamburger--elastic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
                 </div>
-            </div></a><a href="/jazz/"><div class="bg bgbot">
-                <div class="caption">
-                    <span class="border-jazz">Jazz</span>
+                <div id="hide-cont">
+                    <div id="hide">
+                        <a href="#top"><span class="menuborder">Modulet</span></a>
+                        <a href="#booking"><span class="menuborder">Booking</span></a>
+                        <a href="#kontakt"><span class="menuborder">Kontakt</span></a>
+                    </div>
                 </div>
-            </div></a>
+            </div>
+        
+<script>
+$( "#burger" ).click(function() {
+  $( this ).toggleClass( "is-active" );
+});
+$( "#burger" ).click(function() {
+  $( "#hide" ).toggle(600);
+});
+$( ".menuborder" ).click(function(){
+    $( "#hide" ).toggle(600);
+});
+$( ".menuborder" ).click(function(){
+    $( "#burger" ).toggleClass("is-active");
+});
+</script>
+        
+        <div class="bg bg1">
+            <div class="caption">
+                <span class="border">Modulet</span>
+            </div>
+            <div class="arrowdown">
+                <span><i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        
+<script> //set default volume
+  var audio = document.getElementById("audio");
+  audio.volume = 0.6;
+</script>        
+        
+        <div class="content">
+            <h2>Vi tager kampen op mod DJ's</h2>
+            <p>Modulet er den perfekte erstatning for en DJ. Vi spiller nemlig alle de pophits, som DJ Spotify spiller - også de nye. Med et repertoir med fokus på frisk pop-musik leverer vi en helhedsoplevelse med fest og farver - og hvem ved, måske spiller vi også dét der Johnny DeLuxe-nummer, du havde glemt alt om.</p>
+            <p>Du kan finde en teaser af vores musik herunder, og du kan finde en <span class="rep-link linkstyle">liste over numre,</span> vi bl.a. spiller, her.</p>
+            
+            <div class="player">
+                <audio id="audio" controls><source src="/partyteaser.mp3" type="audio/mp3"></audio>
+            </div>
+            
+            <div id="rep-cont">
+                <div class="scrollarrow" id="scrollup">
+                    <span><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                </div>
+                
+                <div id="rep">
+                    <p>
+                    Thomas Helmig - Jeg Tager Imod<br>
+                    Thomas Helmig &amp; Søs Fenger- Den Jeg Elsker<br>
+                    Shaka Loveless - Tomgang<br>
+                    Justin Timberlake - Can’t Stop The Feeling<br>
+                    Justin Timberlake - Se&ntilde;orita<br>
+                    Westlife - When You're Looking Like That<br>
+                    Backstreet Boys - Everybody<br>
+                    The Jackson 5 - Blame It On The Boogie<br>
+                    Michael Jackson - P.Y.T.<br>
+                    Michael Jackson - Bad<br>
+                    Michael Jackson - Billie Jean<br>
+                    Michael Jackson - Thriller<br>
+                    Wham - Wake me up Before you Go-Go<br>
+                    Anderson Paak - Am I Wrong<br>
+                    Amy Winehouse (ft. Mark Ronson) - Valerie<br>
+                    Karen Busck &amp; Erann DD - Hjertet Ser<br>
+                    Daft Punkt (ft. Pharrell) - Get Lucky<br>
+                    Pharrell - Happy<br>
+                    Melodi Grand Prix Medley<br>
+                    TV2 - Bag Duggede Ruder<br>
+                    Stevie Wonder - Superstition<br>
+                    Stevie Wonder - I Wish<br>
+                    Marvelous Mosell - Jeg Tænker På Dig<br>
+                    Soft Cell - Tainted Love<br>
+                    Rocazino - All My Love<br>
+                    BreakBot - Baby Im Yours<br>
+                    Bruno Mars - Treasure<br>
+                    Bruno Mars - 24k Magic<br>
+                    Bruno Mars (ft. Mark Ronson) - Uptown Funk<br>
+                    Gnarls Barkley - Crazy<br>
+                    Katrina &amp; The Waves - Walking on Sunshine<br>
+                    Magic - Rude<br>
+                    Emil Stabil - Allerede Is (Salsa Remix)<br>
+                    Danseorkestret - Kom Tilbage Nu<br>
+                    Gasolin - Rabalderstræde<br>
+                    Maroon 5 - This Love<br>
+                    Private - My Secret Lover<br>
+                    The Weeknd - Can't Feel My Face<br>
+                    Johnny Deluxe - Drenge som mig<br>
+                    Johnny Deluxe - Drømmer jeg<br>
+                    Det Brune Punktum - Kom lad os gå<br>
+                    Robin Williams - Let me Entertain You<br>
+                    Phlake - Pregnant<br>
+                    Scissor Sisters - Take your Mama<br>
+                    Ed Sheeran - Don’t<br>
+                    Ed Sheeran - Shape Of You<br>
+                    Djames Br&auml;un - Fugle<br>
+                    a-ha - Take on me<br>
+                    Johnson - Kig Forbi<br>
+                    TopGunn - Kongens Have<br>
+                    Gulddreng - Model<br>
+                    David Bowie - Let’s Dance<br>
+                    Jon Bon Jovi - Livin' On A Prayer<br>
+                    Jon Bon Jovi - It's My Life<br>
+                    <br>
+                        ...og meget mere...
+                    </p>
+                </div>
+                    <div class="scrollarrow" id="scrolldown">
+                        <span><i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+                    </div>
+                <div id="closebutton" class="rep-link linkstyle">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        
+<script> //toggle repertoire
+$( ".rep-link" ).click(function(){
+   $( "#rep-cont" ).slideToggle(600);
+});        
+</script>
+        
+        <div class="bg bg2">
+            <div id="booking" class="caption">
+                <span class="border">Booking</span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>Party Band</h2>
+            <p>Modulet er en hårdtslående kvintet bestående af trommer, bas, guitar, keys, synthezisers, masser af kor og vokal. Vi spiller faste jobs på barer og natklubber, men vi spiller også gerne til firmafester, bryllupper og andre former for festligheder. Når du booker Modulet, får du hele pakken med lydudstyr, lysshow, røgmaskiner og hele baduljen. Du finder kontaktinformationer længere nede på siden.
+            </p>
+            <div style="text-align: center"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+        </div>
+        
+        <div class="bg bg3">
+            <div id="kontakt" class="caption">
+                <span class="border">Kontakt</span>
+            </div>
+        </div>
+        
+        <div class="content" style="text-align: center">
+            <h2>Kontaktinformationer</h2>
+            <span style="display: block">+45 41 62 14 10</span>
+            <span style="display: block;">kontakt@modulet.dk</span>
+            <span style="display: block;"><a href="http://www.sahlfoto.dk"><i class="fa fa-camera"></i> www.sahlfoto.dk</a></span>
+            <br>
+            
+            <div id="links">
+                <span style="margin-right: 10px;">
+                   <a href="https://www.facebook.com/Modulet.Party.Jazz/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 32pt"></i></a>
+                </span>
+                <span style="margin-left: 5px;">
+                   <a href="https://www.soundcloud.com/modulet" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true" style="font-size: 32pt"></i></a>
+                </span>
+            </div>
+            
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                  <q>Modulet spillede til vores bryllup 23-06-18 med stor succes! De satte virkelig gang i festen og spillede musik der faldt i alles smag. Jeg kan varmt anbefale Modulet, de er søde, rare og meget professionelle. Stort 5 tal her fra.</q>
+                  <p class="author">- Jens, brudgom</p>
+                </div>
+
+                <div class="mySlides">
+                  <q>Modulet leverede en solid dansefest for mere end 80 højskoleelever. Bandet er professionelt og velspillende, og de kan varmt anbefales!</q>
+                  <p class="author">- Nørgaard's Højskole</p>
+                </div>
+
+                <div class="mySlides">
+                  <q>Modulet stod for en vild fest til mit studentergilde. De spillede både moderne pophits og gamle klassikere, der satte gang i dansegulvet.</q>
+                  <p class="author">- Jonas, student</p>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script src="quotes/quotes.js"></script>
+            
+        </div>
+        
+        <div class="bg bg4">
+            <div class="arrowup">
+                <span><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+            </div>
+            <div class="caption">
+                <span class="border">Modulet</span>
+            </div>
+        </div>
+        
     </body>
-    
+
 </html>
